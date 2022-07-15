@@ -30,6 +30,7 @@ public class AnonChat extends JavaPlugin implements Listener {
 	
 	@Override
 	public void onDisable() {
+		Bukkit.getConsoleSender().sendMessage("It was a bright cold day in April, and the clocks were striking thirteen.");
 	}
 	
 	// Command listener
