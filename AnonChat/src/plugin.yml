@@ -1,0 +1,14 @@
+main: me.sonny.AnonChat.AnonChat
+name: AnonChat
+version: 1.0.0
+author: Sonnyee
+
+commands:
+  anon:
+    description: Hide your nickname on chat.
+    
+permissions:
+  anonchat.use:
+    description: Use anon command.
+    default: true
+    
