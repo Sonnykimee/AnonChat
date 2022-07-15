@@ -1,5 +1,6 @@
 package me.sonny.AnonChat;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -83,10 +84,14 @@ public class AnonChat extends JavaPlugin implements Listener {
 		}
 	}
 	
-	// Creates a random string based on the given seed.
+	// Creates a random string based on the given seed and date.
 	public String createRandomSerial(String seed, int serialLength) {
 		String chars = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890";
-		seed += "DownWithM$"; // Ha ha
+		
+		// Random string changes in daily basis
+		LocalDate date = LocalDate.now();
+		seed += date.toString();
+		seed += "DownWithM$"; // ha ha
 		
 		Random rand = new Random();
 		rand.setSeed(seed.hashCode());
