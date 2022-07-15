@@ -24,7 +24,7 @@ public class AnonChat extends JavaPlugin implements Listener {
 	@Override
 	public void onEnable() {
 		this.getServer().getPluginManager().registerEvents(this, this);
-		Bukkit.getConsoleSender().sendMessage("Masqeurade! Paper faces on parade, Masquerade! Hide your face, so the world will never find you!");
+		Bukkit.getConsoleSender().sendMessage("Masquerade! Paper faces on parade, Masquerade! Hide your face, so the world will never find you!");
 		
 		anonPlayers = new ArrayList<>();
 	}
