@@ -4,7 +4,7 @@ Any software that is linked to GPLv2 software must be redistributed as GPLv2.
 Spigot API is licensed under GPLv2, and this plugin requires to import Spigot API
 classes at its compile time which again means the compliled binary of this pluign
 will be GPLv2. However, the project file itself does not include Spigot API (you
-will have to import manually). I am releasing my source codes under the MIT license
+need to import manually). I am releasing my source codes under the MIT license
 which does not require derivative works to be distributed under the same license.
 
 --------------------------------------------------------------------------------
