@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------
-NOTE:
+#NOTE:
 Any software that is linked to GPLv3 software must be redistributed as GPLv3.
 Spigot API is licensed under GPLv3, and this plugin requires to import Spigot API
 classes at its compile time which again means the compliled binary of this pluign
