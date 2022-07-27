@@ -12,7 +12,7 @@ which does not require derivative works to be distributed under the same license
 
 MIT License
 
-Copyright (c) 2022 Sonnykimee
+Copyright (c) 2022 Sonny Kim
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
