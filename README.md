@@ -20,16 +20,10 @@ anon.use - Use anon command.
 %MSG%: Chat message placeholder.
 
 
-**name-length: 8**
-
-Length of nickname.
+**name-length: 8**: Length of nickname.
 
 
-**random-seed-text: 'DownWithM$'**
-
-A small piece of text that will be used to create a random seed. The random seed is also based on the current local date, and the name of player.
+**random-seed-text: 'DownWithM$'**: A small piece of text that will be used to create a random seed. The random seed is also based on the current local date, and the name of player.
 
 
-**random-name-charset: 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890'**
-
-Characters that can be in the generated nickname (will remove duplicates).
+**random-name-charset: 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890'**: Characters that can be in the generated nickname (will remove duplicates).
