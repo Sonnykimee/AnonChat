@@ -1,32 +1,31 @@
 package me.sonny.AnonChat;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import net.md_5.bungee.api.ChatColor;
 
-public class AnonChat extends JavaPlugin implements Listener {
+public class AnonChat extends JavaPlugin {
 	
-	// List of players who are anonymous on chat
-	List<Player> anonPlayers;
+	public List<Player> anonPlayers;
 	
 	@Override
 	public void onEnable() {
-		this.getServer().getPluginManager().registerEvents(this, this);
-		Bukkit.getConsoleSender().sendMessage("Masquerade! Paper faces on parade, Masquerade! Hide your face, so the world will never find you!");
-		
 		anonPlayers = new ArrayList<>();
+		
+		// Set up Listener
+		getServer().getPluginManager().registerEvents(new PlayerEventListener(this), this);
+		
+		// Set up config.yml file
+		saveDefaultConfig();
+		
+		Bukkit.getConsoleSender().sendMessage("Masquerade! Paper faces on parade, Masquerade! Hide your face, so the world will never find you!");
 	}
 	
 	@Override
@@ -66,42 +65,5 @@ public class AnonChat extends JavaPlugin implements Listener {
 		}
 		
 		return false;
-	}
-	
-	// Player chat listener
-	@EventHandler
-	public void onPlayerChat(AsyncPlayerChatEvent event) {
-		// Cancel player chat event and broadcast the message with an anonymous name
-		Player player = event.getPlayer();
-		
-		if (anonPlayers.contains(player)) {
-			// Player has enabled anonymous chat
-			event.setCancelled(true);
-			
-			String anonName = "Anon_" + createRandomSerial(player.getName(), 8);
-			
-			this.getServer().broadcastMessage(ChatColor.WHITE + "<" + ChatColor.GRAY + anonName + ChatColor.WHITE + "> " + event.getMessage());
-		}
-	}
-	
-	// Creates a random string based on the given seed and date.
-	public String createRandomSerial(String seed, int serialLength) {
-		String chars = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890";
-		
-		// Random string changes in daily basis
-		LocalDate date = LocalDate.now();
-		seed += date.toString();
-		seed += "DownWithM$"; // ha ha
-		
-		Random rand = new Random();
-		rand.setSeed(seed.hashCode());
-		
-		String result = "";
-		
-		for (int i=0; i<serialLength; i++) {
-			result += chars.charAt(rand.nextInt(chars.length()));
-		}
-		
-		return result;
 	}
 }

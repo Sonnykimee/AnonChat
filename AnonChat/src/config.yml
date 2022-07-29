@@ -1,0 +1,4 @@
+name-display-format: '&f<&7Anon_%NAME%&f> %MSG%'
+name-length: 8
+random-seed-text: 'DownWithM$'
+random-name-charset: 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890'
