@@ -1,5 +1,5 @@
 # AnonChat
-AnonChat is a simple Spigot plugin that allows players to chat anonymously. AnonChat can protect players from losing multiplayer access caused by the recently added Player Report System in Minecraft version 1.19.84.
+AnonChat is a simple Spigot plugin that allows players to chat anonymously. AnonChat can protect players from losing multiplayer access because of the recently added Player Report System in Minecraft version 1.19.84.
 
 
 # Commands
