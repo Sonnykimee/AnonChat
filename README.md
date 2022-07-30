@@ -13,7 +13,7 @@ anon.use - Use anon command.
 # Configurations
 **name-display-format: '&f<&7Anon_%NAME%&f> %MSG%'**
 
-&: Color code. See (https://htmlcolorcodes.com/minecraft-color-codes/).
+&: Color code. See [Minecraft Color Codes](https://htmlcolorcodes.com/minecraft-color-codes/).
 
 %NAME%: Random generated nickname placeholder.
 
