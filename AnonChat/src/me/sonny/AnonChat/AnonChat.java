@@ -13,7 +13,7 @@ import net.md_5.bungee.api.ChatColor;
 
 public class AnonChat extends JavaPlugin {
 	
-	public List<Player> anonPlayers;
+	private List<Player> anonPlayers;
 	
 	@Override
 	public void onEnable() {
@@ -65,5 +65,10 @@ public class AnonChat extends JavaPlugin {
 		}
 		
 		return false;
+	}
+	
+	// anonPlayers getter
+	public List<Player> getAnonPlayers() {
+		return anonPlayers;
 	}
 }

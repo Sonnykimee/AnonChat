@@ -22,7 +22,7 @@ public class PlayerEventListener implements Listener {
 		// Cancel player chat event and broadcast the message with an anonymous name
 		Player player = event.getPlayer();
 		
-		if (PLUGIN.anonPlayers.contains(player)) {
+		if (PLUGIN.getAnonPlayers().contains(player)) {
 			// Player has enabled anonymous chat
 			event.setCancelled(true);
 			
@@ -51,6 +51,10 @@ public class PlayerEventListener implements Listener {
 	@EventHandler
 	public void onPlayerQuit(PlayerQuitEvent event) {
 		// Remove player from the list
-		PLUGIN.anonPlayers.remove(event.getPlayer());
+		Player player = event.getPlayer();
+		
+		if (PLUGIN.getAnonPlayers().contains(player)) {
+			PLUGIN.getAnonPlayers().remove(player);
+		}
 	}
 }
